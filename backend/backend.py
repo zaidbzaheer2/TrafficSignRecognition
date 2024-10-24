@@ -10,7 +10,6 @@ def get_output():
 
     image = request.files['image']
     # You can save the file or process it here
-    image.save(f"./uploads/{image.filename}")
     prediction = predict(image)
     return jsonify({'prediction': prediction})
 
