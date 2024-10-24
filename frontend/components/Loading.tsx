@@ -7,7 +7,7 @@ const Loading = () => {
         <div className="flex flex-col items-center gap-5">
             <BounceLoader color="#047857"  loading={loading}/>
             {loading && <p>Processing</p>}
-            {!loading && <p>Upload an Image</p>}
+            {!loading && output=='None' && <p>Upload an Image</p>}
             {!loading && output!='None' && <p>Processed</p>}
             
         </div>
